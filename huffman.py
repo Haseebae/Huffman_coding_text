@@ -116,7 +116,7 @@ class HuffmanCoding:
 		# with makes exception handling easier; simplifies common resource management   
 		with open(self.path, 'r+') as file, open(output_path, 'wb') as output:
 			text = file.read()
-			text = text.rstrip()
+			text = text.rstrip() # trailing chars removed
 
 			frequency = self.make_frequency_dict(text)
 			self.make_heap(frequency)
